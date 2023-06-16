@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .Values.cluster.name }}-keda
+  name: keda
   namespace: argocd
   labels:
     app-type: cloud-platform-workload
@@ -10,8 +10,8 @@ metadata:
 spec:
   destination:
     namespace: keda
-    server: {{ .Values.cluster.server }}
-  project: {{ .Values.workload.project }}
+    server: "https://kubernetes.default.svc"
+  project: default
   source:
     chart: {{ .Values.workload.keda.chart.chartName }}
     repoURL: {{ .Values.workload.keda.chart.repoURL }}
