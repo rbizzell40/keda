@@ -1,0 +1,15 @@
+mesh:
+  enabled: false
+workload:
+  project: system
+
+
+##########################
+######## Keda ############
+##########################
+keda:
+  enabled: true
+  chart:
+    repoURL: "https://kedacore.github.io/charts"
+    version: "2.10.2"
+    chartName: "keda"

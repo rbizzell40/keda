@@ -1,0 +1,28 @@
+#{{- if .Values.workload.keda.enabled }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ .Values.cluster.name }}-keda
+  namespace: argocd
+  labels:
+    app-type: cloud-platform-workload
+    cloud-platform-workload: keda
+spec:
+  destination:
+    namespace: keda
+    server: {{ .Values.cluster.server }}
+  project: {{ .Values.workload.project }}
+  source:
+    chart: {{ .Values.workload.keda.chart.chartName }}
+    repoURL: {{ .Values.workload.keda.chart.repoURL }}
+    targetRevision: {{ .Values.workload.keda.chart.version }}
+    helm:
+      releaseName: keda
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: false
+      allowEmpty: false
+    syncOptions:
+      - CreateNamespace=true
+#{{- end }}
