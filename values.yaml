@@ -7,4 +7,6 @@ keda:
     repoURL: "https://kedacore.github.io/charts"
     version: "2.8.2"
     chartName: "keda"
-
+operator:
+  name: keda-operator
+  replicaCount: 2

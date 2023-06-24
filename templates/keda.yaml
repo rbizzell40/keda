@@ -1,8 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: keda
-  namespace: argocd
+  name: {{ .Values.operator.name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "keda.labels" . | indent 4 }}
 spec:
   destination:
     namespace: keda
