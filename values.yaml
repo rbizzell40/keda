@@ -2,7 +2,7 @@
 ######## Keda ############
 ##########################
 keda:
-  enabled: true
+  enabled: false
   chart:
     repoURL: "https://kedacore.github.io/charts"
     version: "2.8.2"
