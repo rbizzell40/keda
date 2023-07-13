@@ -10,8 +10,6 @@ spec:
   destination:
     namespace: keda
     server: "https://kubernetes.default.svc"
-  containers:
-    image: "{{ .Values.keda.image.repository }}:{{ .Values.keda.image.tag }}"
   project: default
   source:
     chart: {{ .Values.keda.chart.chartName }}
