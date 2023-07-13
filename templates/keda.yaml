@@ -10,8 +10,6 @@ spec:
   destination:
     namespace: keda
     server: "https://kubernetes.default.svc"
-  containers:
-    image: "{{ .Values.keda.image.repository }}:{{ .Values.keda.image.tag }}"
   project: default
   source:
     chart: {{ .Values.keda.chart.chartName }}
@@ -21,10 +19,7 @@ spec:
       releaseName: keda
       values: |-
         image:
-          repository: {{ .Values.keda.image.repository }}
-          tag: {{ .Values.keda.image.tag }}
-          repository: {{ .Values.metricsApiServer.image.repository }}
-          tag: {{ .Values.metricsApiServer.image.tag }}
+          repository: {{ .Values.keda.image.repository }}:{{ .Values.keda.image.tag}}
   syncPolicy:
     automated:
       prune: true
