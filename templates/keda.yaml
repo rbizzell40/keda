@@ -6,11 +6,12 @@ metadata:
   labels:
     app.kubernetes.io/managed-by: {{ .Release.Service }}
     app.kubernetes.io/name: {{ .Values.operator.name }}
-    app.kubernetes.io/version: {{ .Values.keda.image.tag }}
 spec:
   destination:
     namespace: keda
     server: "https://kubernetes.default.svc"
+  containers:
+    image: "{{ .Values.keda.image.repository }}:{{ .Values.keda.image.tag }}"
   project: default
   source:
     chart: {{ .Values.keda.chart.chartName }}
