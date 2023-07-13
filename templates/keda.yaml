@@ -21,7 +21,7 @@ spec:
         image:
           repository: {{ .Values.keda.image.repository }}
           tag: {{ .Values.keda.image.tag }}
-          repositoru: {{ .Values.metricsApiServer.image.repository}}
+          repository: {{ .Values.metricsApiServer.image.repository}}
           tag: {{ .Values.metricsApiServer.image.tag}}
   syncPolicy:
     automated:
