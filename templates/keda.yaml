@@ -18,11 +18,7 @@ spec:
     helm:
       releaseName: keda
       values: |-
-        image:
-          repository: {{ .Values.keda.image.repository }}
-          tag: {{ .Values.keda.image.tag }}
-          repository: {{ .Values.metricsApiServer.image.repository }}
-          tag: {{ .Values.metricsApiServer.image.tag }}
+        image: {{ .Values.keda.image.repository }}:{{ .Values.keda.image.tag }}
   syncPolicy:
     automated:
       prune: true
