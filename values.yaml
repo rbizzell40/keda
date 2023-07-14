@@ -10,10 +10,10 @@ keda:
   image:
     repository: "ghcr.io/kedacore/keda"
     tag: "2.8.1"
-metricsApiServer:
-  image:
-    repository: "ghcr.io/kedacore/keda-metrics-apiserver"
-    tag: "2.8.1"
+#metricsApiServer:
+#  image:
+#    repository: "ghcr.io/kedacore/keda-metrics-apiserver"
+#    tag: "2.8.1"
 operator:
   name: keda-operator
   replicaCount: 2
