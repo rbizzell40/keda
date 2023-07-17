@@ -12,9 +12,9 @@ spec:
     server: "https://kubernetes.default.svc"
   project: default
   source:
-    chart: {{ .Values.chart.chartName }}
-    repoURL: {{ .Values.chart.repoURL }}
-    targetRevision: {{ .Values.chart.version }}
+    chart: {{ .Values.keda.chart.chartName }}
+    repoURL: {{ .Values.keda.chart.repoURL }}
+    targetRevision: {{ .Values.keda.chart.version }}
     helm:
       releaseName: keda
       values: |-
