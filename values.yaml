@@ -1,17 +1,17 @@
 ##########################
 ######## Keda ############
 ##########################
-#keda:
-#  enabled: true
+keda:
+  enabled: true
 
-image:
-  keda:
-    repository: ghcr.io/kedacore/keda
-    tag: "2.8.2"
-chart:
-  repoURL: "https://kedacore.github.io/charts"
-  version: "2.8.2"
-  chartName: "keda"
+#image:
+#  keda:
+#    repository: ghcr.io/kedacore/keda
+#    tag: "2.8.2"
+  chart:
+    repoURL: "https://kedacore.github.io/charts"
+    version: "2.8.2"
+    chartName: "keda"
 
 
 

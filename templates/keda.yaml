@@ -18,8 +18,6 @@ spec:
     helm:
       releaseName: keda
       values: |-
-        image:
-          repository: {{ .Values.image.keda.repository }}:{{ .Values.image.keda.tag }}
   syncPolicy:
     automated:
       prune: true
