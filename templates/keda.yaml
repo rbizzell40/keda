@@ -19,8 +19,7 @@ spec:
       releaseName: keda
       values: |-
         image:
-          repository: {{ .Values.image.keda.repository }}
-          tag: {{ .Values.image.keda.tag | default .Values.image.keda.tag }}
+          repository: {{ .Values.image.keda.repository }}:{{ .Values.image.keda.tag }}
   syncPolicy:
     automated:
       prune: true
