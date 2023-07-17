@@ -20,7 +20,7 @@ spec:
       values: |-
         image:
           repository: {{ .Values.image.keda.repository }}
-          tag: {{ .Values.image.keda.tag }}
+          tag: {{ .Values.image.keda.tag | default .Values.image.keda.tag }}
   syncPolicy:
     automated:
       prune: true

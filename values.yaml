@@ -3,6 +3,7 @@
 ##########################
 #keda:
 #  enabled: true
+
 image:
   keda:
     repository: "ghcr.io/kedacore/keda"
