@@ -3,17 +3,18 @@
 ##########################
 keda:
   enabled: true
-  chart:
-    repoURL: "https://kedacore.github.io/charts"
-    version: "2.8.1"
-    chartName: "keda"
-  image:
-    repository: "ghcr.io/kedacore/keda"
-    tag: "2.8.1"
-metricsApiServer:
-  image:
-    repository: "ghcr.io/kedacore/keda-metrics-apiserver"
-    tag: "2.8.1"
+image:
+  repository: "ghcr.io/kedacore/keda"
+  tag: "2.8.1"
+chart:
+  repoURL: "https://kedacore.github.io/charts"
+  version: "2.8.1"
+  chartName: "keda"
+
+#metricsApiServer:
+#  image:
+#    repository: "ghcr.io/kedacore/keda-metrics-apiserver"
+#    tag: "2.8.1"
 operator:
   name: keda-operator
   replicaCount: 2
