@@ -11,6 +11,3 @@ chart:
   repoURL: "https://kedacore.github.io/charts"
   version: "2.8.1"
   chartName: "keda"
-
-  name: keda-operator
-  replicaCount: 2
