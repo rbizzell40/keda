@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     chart: "keda"
-    repoURL: {{.Values.keda.chart.repoURL}}
+    repoURL: {{.Values.keda.chart.repoURL }}
     targetRevision: {{ .Values.keda.chart.version }}
     path: ''
     helm:

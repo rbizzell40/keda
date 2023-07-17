@@ -6,7 +6,7 @@
 
 image:
   keda:
-    repository: "ghcr.io/kedacore/keda"
+    repository: ghcr.io/kedacore/keda
     tag: "2.8.1"
 chart:
   repoURL: "https://kedacore.github.io/charts"
